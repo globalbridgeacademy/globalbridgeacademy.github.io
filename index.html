@@ -29,15 +29,15 @@
             padding-top: 60px;
         }
 
-        /* منوی بالای صفحه */
+        /* نوار بالای صفحه */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             height: 60px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -52,23 +52,25 @@
         }
 
         .menu-btn {
-            background: none;
+            background: #f0f2f5;
             border: none;
             font-size: 24px;
             cursor: pointer;
             color: var(--dark-color);
+            padding: 5px 12px;
+            border-radius: 6px;
         }
 
-        /* منوی کشویی همبرگری */
+        /* منوی کشویی منحصربه‌فرد */
         .nav-menu {
             position: fixed;
             top: 60px;
             right: -100%;
-            width: 260px;
+            width: 270px;
             height: calc(100vh - 60px);
-            background-color: white;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            background-color: #ffffff;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
             display: flex;
             flex-direction: column;
             padding: 20px;
@@ -78,7 +80,7 @@
         }
 
         .nav-menu.active {
-            right: 0;
+            right: 0 !important;
         }
 
         .nav-menu a {
@@ -86,12 +88,14 @@
             color: var(--dark-color);
             font-weight: bold;
             font-size: 15px;
-            padding: 10px;
+            padding: 12px;
             border-bottom: 1px solid #f0f0f0;
+            display: block;
         }
 
         .nav-menu a:hover {
             color: var(--primary-color);
+            background-color: #f8f9fa;
         }
 
         .container {
@@ -102,7 +106,6 @@
 
         .header {
             margin-bottom: 30px;
-            margin-top: 10px;
         }
 
         .logo-img {
@@ -128,7 +131,6 @@
             margin-bottom: 20px;
         }
 
-        /* استایل مانیتور ویدیو */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -138,7 +140,7 @@
             background: #000;
             border-radius: 12px;
             margin-bottom: 35px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             scroll-margin-top: 80px;
         }
 
@@ -151,15 +153,16 @@
             border: 0;
         }
 
-        /* استایل پنل‌های اختصاصی با بگراند و رنگ‌بندی منحصربه‌فرد */
+        /* تنظیمات پنل‌های محتوایی */
         .panel {
             padding: 25px;
             border-radius: 16px;
             text-align: right;
             margin-bottom: 35px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.04);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
             scroll-margin-top: 80px;
             border-right: 6px solid #ccc;
+            background-color: #ffffff;
         }
 
         .panel h2 {
@@ -180,14 +183,12 @@
             margin-bottom: 15px;
         }
 
-        /* ۱. رنگ‌بندی پنل مکتب آنلاین */
         #panel-school {
             background: linear-gradient(135deg, #e3f2fd, #ffffff);
             border-right-color: #0288d1;
         }
         #panel-school h2 { color: #0288d1; }
 
-        /* ۲. رنگ‌بندی پنل بورسیه روسیه */
         #panel-scholarships {
             background: linear-gradient(135deg, #fff3e0, #ffffff);
             border-right-color: #f57c00;
@@ -205,26 +206,23 @@
             font-weight: bold;
         }
 
-        /* ۳. رنگ‌بندی پنل استقلال مالی و ترید */
         #panel-trading {
             background: linear-gradient(135deg, #e8f5e9, #ffffff);
             border-right-color: #388e3c;
         }
         #panel-trading h2 { color: #388e3c; }
 
-        /* ۴. رنگ‌بندی پنل آموزش‌های ورزشی */
         #panel-sports {
             background: linear-gradient(135deg, #f3e5f5, #ffffff);
             border-right-color: #7b1fa2;
         }
         #panel-sports h2 { color: #7b1fa2; }
 
-        /* دکمه‌های داخل پنل‌ها */
         .panel-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 10px 18px;
+            padding: 12px 20px;
             border-radius: 8px;
             text-decoration: none;
             color: white;
@@ -238,7 +236,6 @@
         .panel-btn-yt { background-color: var(--yt-color); }
         .panel-btn span { margin-right: 8px; }
 
-        /* بخش شبکه‌های عمومی پایین صفحه */
         .footer-channels {
             background: white;
             padding: 20px;
@@ -248,18 +245,11 @@
             scroll-margin-top: 80px;
         }
 
-        .footer-channels h3 {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #495057;
-        }
-
         .btn-full {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 14px;
-            margin-bottom: 12px;
             border-radius: 10px;
             text-decoration: none;
             color: white;
@@ -279,20 +269,19 @@
 </head>
 <body>
 
-    <!-- بار منوی بالای صفحه همراه با دکمه سه خط -->
+    <!-- نوار منوی بالای صفحه -->
     <div class="navbar">
         <span class="nav-logo">Global Bridge Academy</span>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <button class="menu-btn" id="hamburgerClick" onclick="toggleMenu()">☰</button>
     </div>
 
-    <!-- منوی همبرگری کشویی متصل به پنل‌ها -->
+    <!-- منوی همبرگری کشویی -->
     <div class="nav-menu" id="navMenu">
-        <a href="#about" onclick="toggleMenu()">🏠 صفحه اصلی و درباره ما</a>
-        <a href="#panel-school" onclick="toggleMenu()">🎓 خدمات مکتب آنلاین</a>
-        <a href="#panel-scholarships" onclick="toggleMenu()">🌍 بورسیه اوپن دورز روسیه</a>
+        <a href="#about" onclick="toggleMenu()">🏠 صفحه اصلی</a>
+        <a href="#panel-school" onclick="toggleMenu()">🎓 مکتب آنلاین</a>
+        <a href="#panel-scholarships" onclick="toggleMenu()">🌍 بورسیه روسیه</a>
         <a href="#panel-trading" onclick="toggleMenu()">📈 استقلال مالی و ترید</a>
         <a href="#panel-sports" onclick="toggleMenu()">⚽ آموزش‌های ورزشی</a>
-        <a href="#main-links" onclick="toggleMenu()">🔗 کانال‌های ارتباطی</a>
     </div>
 
     <div class="container">
@@ -304,12 +293,12 @@
             <p class="subtitle">مرکز تخصصی آموزش، خدمات آنلاین بورسیه و مهارت‌های نوین</p>
         </div>
 
-        <!-- مانیتور ویدیو آموزشی فعال -->
+        <!-- ویدیوی یوتیوب -->
         <div class="video-container" id="video-section">
             <iframe src="https://youtube.com" allowfullscreen></iframe>
         </div>
 
-        <!-- ۱. پنل خدمات مکتب آنلاین پل جهانی -->
+        <!-- ۱. پنل خدمات مکتب آنلاین -->
         <div class="panel" id="panel-school">
             <h2>🎓 خدمات آموزش آنلاین مکتب پل جهانی</h2>
             <p>این مکتب ویژه کسانیکه از مکتب بازمانده‌اند طراحی شده و بستری عالی برای ادامه تحصیل از صنف ۷ الی ۱۲ فراهم کرده است. دروس تقویتی و سواد دیجیتال نیز به صورت زنده تدریس می‌گردد. بقیه دروس مکاتب را پیش خود در خانه با استفاده از کتاب‌ها و منابع آموزشی فرا گرفته و فقط هر هفته یک‌بار در امتحان هفتوار و در آخر سمستر در امتحان عمومی شرکت می‌کنید.</p>
@@ -319,3 +308,10 @@
                 <li><strong>روند تسریعی الف:</strong> از صنف هفت الی نه (سه صنف در یک سال).</li>
                 <li><strong>روند تسریعی ب:</strong> از صنف ده الی دوازده (سه صنف در یک سال).</li>
             </ul>
+            <p><strong>سند فراغت و مدارج بین‌المللی:</strong><br>فارغین مکتب سند شهادت‌نامه طبق کریکولم معارف افغانستان و سند معتبر از موسسه TLM بین‌المللی بریتانیا دریافت می‌کنند. این مکتب عضو رسمی موسسه پل آموزش افغانستان می‌باشد. پس از فراغت وارد سطح ۲ بین‌المللی (ورود به بورس‌ها) و سپس سطح ۳ بین‌المللی (طبق سیستم بریتانیا برای تاپ‌ترین فلوشیپ‌ها) می‌شوید.</p>
+            
+            <a href="https://whatsapp.com" target="_blank" class="panel-btn panel-btn-wa">
+                💬 <span>جهت ثبت نام در مکتب پیام دهید</span>
+            </a>
+        </div>
+
