@@ -1,83 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Bridge Academy</title>
+    <title>Global Bridge Academy | آکادمی پل جهانی</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary-color: #0d6efd;
+            --yt-color: #ff0000;
+            --wa-color: #25d366;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --accent-color: #ffc107;
+        }
+        
+        * {
+            box-sizing: border-box;
             margin: 0;
-            background: #f5f8ff;
-            color: #333;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
             text-align: center;
         }
 
-        header {
-            background: #1b4d89;
-            color: white;
-            padding: 40px 20px;
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        /* استایل لوگوی واقعی */
+        .logo-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid white;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 10px;
         }
 
-        section {
-            padding: 30px;
+        .subtitle {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
 
-        .box {
+        .info-section {
             background: white;
-            margin: 20px auto;
             padding: 20px;
-            max-width: 700px;
-            border-radius: 10px;
+            border-radius: 12px;
+            text-align: right;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
-        footer {
-            background: #222;
-            color: white;
+        .info-section h2 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 5px;
+        }
+
+        /* استایل مخصوص بخش ترید و بورسیه */
+        .badge-scholarship {
+            background-color: #fff3cd;
+            border-right: 5px solid var(--accent-color);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .badge-trade {
+            background-color: #e2f0d9;
+            border-right: 5px solid #385723;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* استایل مانیتور ویدیو */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .notice-box {
+            background-color: #e7f1ff;
+            border-right: 5px solid var(--primary-color);
             padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #0a58ca;
+            text-align: right;
+        }
+
+        .links-title {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #495057;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-youtube {
+            background-color: var(--yt-color);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--wa-color);
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #adb5bd;
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Global Bridge Academy</h1>
-    <p>An Afghan Educational Initiative</p>
-</header>
+    <div class="container">
+        
+        <!-- بخش هدر و لوگوی مکتب -->
+        <div class="header">
+            <!-- آموزش: نام فایل لوگوی خود را به جای logo.jpg بنویسید -->
+            <img src="logo.jpg" alt="Global Bridge Academy Logo" class="logo-img" onerror="this.style.display='none';">
+            <h1>Global Bridge Academy</h1>
+            <p class="subtitle">مرکز تخصصی آموزش انواع مهارت‌ها و خدمات آنلاین</p>
+        </div>
 
-<section>
-    <div class="box">
-        <h2>Welcome to Global Bridge Academy</h2>
-        <p>
-        Empowering students through quality education,
-        technology, and global learning opportunities.
-        </p>
+        <!-- پخش ویدیو از یوتیوب درون سایت -->
+        <div class="video-container">
+            <!-- آموزش: کد ویدیو (بعد از v=) را به جای عبارت زیر جایگزین کنید -->
+            <iframe src="https://youtube.com" allowfullscreen></iframe>
+        </div>
+
+        <!-- بخش خدمات بورسیه تحصیلی -->
+        <div class="info-section">
+            <h2>🌍 خدمات و مشاوره بورسیه‌های تحصیلی</h2>
+            <div class="badge-scholarship">
+                <strong>اطلاع‌رسانی بورسیه‌ها:</strong> جدیدترین فرصت‌های تحصیلی رایگان در کشورهای مختلف (ترکیه، ایتالیا، چین و...) را در کانال واتساپ ما دنبال کنید.
+            </div>
+            <div class="badge-scholarship">
+                <strong>خدمات ما:</strong> کمک به آماده‌سازی اسناد، انگیزه‌نامه (SOP) و توصیه‌نامه تخصصی جهت قبولی در بورسیه‌ها.
+            </div>
+        </div>
+
+        <!-- بخش آموزش ترید و بازارهای مالی -->
+        <div class="info-section">
+            <h2>📈 آموزش ترید و بازارهای مالی</h2>
+            <div class="badge-trade">
+                <strong>مفاهیم پایه تا پیشرفته:</strong> آشنایی با بازارهای مالی، روانشناسی بازار و مدیریت ریسک به زبان ساده.
+            </div>
+            <div class="badge-trade">
+                <strong>تحلیل اسعار و کریپتو:</strong> بررسی روزانه روند جفت‌ارزها و ارزهای دیجیتال برای کسب درآمد در خانه.
+            </div>
+        </div>
+
+        <!-- پیام خوش‌آمدگویی -->
+        <div class="notice-box">
+            <strong>دانش‌پژوه گرامی سلام؛</strong><br>
+            برای تماشای ویدیوهای کامل بورسیه و ترید و دریافت مواد آموزشی، از دکمه‌های زیر استفاده کنید.
+        </div>
+
+        <p class="links-title">🔗 کانال‌های رسمی ما:</p>
+
+        <!-- دکمه کانال یوتیوب -->
+        <a href="https://youtube.com" target="_blank" class="btn btn-youtube">
+            🎥 <span>ورود به کانال یوتیوب (ویدیوهای آموزشی)</span>
+        </a>
+
+        <!-- دکمه کانال واتساپ -->
+        <a href="https://whatsapp.com" target="_blank" class="btn btn-whatsapp">
+            💬 <span>عضویت در کانال واتساپ (اعلامیه‌ها و جزوه‌ها)</span>
+        </a>
+
+        <div class="footer">
+            <p>© 2026 Global Bridge Academy. تمامی حقوق محفوظ است.</p>
+        </div>
+
     </div>
-
-    <div class="box">
-        <h2>Our Mission</h2>
-        <p>
-        To provide modern, accessible, and high-quality
-        education for students in Afghanistan and beyond.
-        </p>
-    </div>
-
-    <div class="box">
-        <h2>Programs</h2>
-        <p>
-        English Language | Online Learning | Digital Skills
-        </p>
-    </div>
-</section>
-
-<footer>
-    © 2026 Global Bridge Academy
-</footer>
 
 </body>
 </html>
