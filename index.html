@@ -18,7 +18,6 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -26,210 +25,85 @@
             color: var(--dark-color);
             line-height: 1.6;
             text-align: center;
-            padding-top: 60px;
-        }
-
-        /* نوار بالای صفحه */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            z-index: 1000;
-        }
-
-        .nav-logo {
-            font-weight: bold;
-            color: var(--primary-color);
-            font-size: 18px;
-        }
-
-        .menu-btn {
-            background: #f0f2f5;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--dark-color);
-            padding: 5px 12px;
-            border-radius: 6px;
-        }
-
-        /* منوی کشویی اصلاح شده */
-        .nav-menu {
-            position: fixed;
-            top: 60px;
-            right: -100%;
-            width: 270px;
-            height: calc(100vh - 60px);
-            background-color: #ffffff;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-            transition: 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            gap: 12px;
-            text-align: right;
-            z-index: 999;
-        }
-
-        /* استایل نمایش منو */
-        .nav-menu.show {
-            right: 0 !important;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: bold;
-            font-size: 15px;
-            padding: 12px;
-            border-bottom: 1px solid #f0f0f0;
-            display: block;
-        }
-
-        .nav-menu a:hover {
-            color: var(--primary-color);
-            background-color: #f8f9fa;
+            padding: 20px 10px;
         }
 
         .container {
-            max-width: 650px;
-            margin: 20px auto;
-            padding: 15px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .header {
             margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
         }
 
         .logo-img {
-            width: 110px;
-            height: 110px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             display: block;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-size: 26px;
+            font-size: 24px;
             color: var(--dark-color);
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .subtitle {
             color: #6c757d;
-            font-size: 15px;
-            margin-bottom: 20px;
+            font-size: 14px;
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 12px;
-            margin-bottom: 35px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            scroll-margin-top: 80px;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* پنل‌ها */
+        /* استایل پنل‌های اطلاعات */
         .panel {
-            padding: 25px;
+            background: #ffffff;
+            padding: 20px;
             border-radius: 16px;
             text-align: right;
-            margin-bottom: 35px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-            scroll-margin-top: 80px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
             border-right: 6px solid #ccc;
-            background-color: #ffffff;
         }
 
         .panel h2 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-size: 18px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .panel p, .panel li {
-            font-size: 14.5px;
-            margin-bottom: 10px;
+            font-size: 14px;
+            margin-bottom: 8px;
             text-align: justify;
+            color: #333;
         }
 
         .panel ul {
-            padding-right: 20px;
-            margin-bottom: 15px;
+            padding-right: 15px;
+            margin-bottom: 12px;
         }
 
-        #panel-school {
-            background: linear-gradient(135deg, #e3f2fd, #ffffff);
-            border-right-color: #0288d1;
-        }
-        #panel-school h2 { color: #0288d1; }
-
-        #panel-scholarships {
-            background: linear-gradient(135deg, #fff3e0, #ffffff);
-            border-right-color: #f57c00;
-        }
-        #panel-scholarships h2 { color: #f57c00; }
-        
-        .expert-badge {
-            background-color: #e65100;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        #panel-trading {
-            background: linear-gradient(135deg, #e8f5e9, #ffffff);
-            border-right-color: #388e3c;
-        }
-        #panel-trading h2 { color: #388e3c; }
-
-        #panel-sports {
-            background: linear-gradient(135deg, #f3e5f5, #ffffff);
-            border-right-color: #7b1fa2;
-        }
-        #panel-sports h2 { color: #7b1fa2; }
-
+        /* دکمه‌های ارتباطی */
         .panel-btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 20px;
-            border-radius: 8px;
+            padding: 12px;
+            border-radius: 10px;
             text-decoration: none;
             color: white;
             font-weight: bold;
             font-size: 14px;
-            margin-top: 10px;
+            margin-top: 15px;
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
 
@@ -237,70 +111,50 @@
         .panel-btn-yt { background-color: var(--yt-color); }
         .panel-btn span { margin-right: 8px; }
 
-        .footer-channels {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            scroll-margin-top: 80px;
-        }
+        /* رنگ‌بندی اختصاصی پنل‌ها */
+        #school { border-right-color: #0288d1; }
+        #school h2 { color: #0288d1; }
 
-        .btn-full {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px;
-            border-radius: 10px;
-            text-decoration: none;
+        #scholarships { border-right-color: #f57c00; }
+        #scholarships h2 { color: #f57c00; }
+        
+        .expert-badge {
+            background-color: #e65100;
             color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            display: inline-block;
+            margin-bottom: 8px;
             font-weight: bold;
-            font-size: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .btn-full-yt { background-color: var(--yt-color); }
+        #trading { border-right-color: #388e3c; }
+        #trading h2 { color: #388e3c; }
+
+        #sports { border-right-color: #7b1fa2; }
+        #sports h2 { color: #7b1fa2; }
 
         .footer {
-            margin-top: 40px;
-            font-size: 12px;
+            margin-top: 30px;
+            font-size: 11px;
             color: #adb5bd;
         }
     </style>
 </head>
 <body>
 
-    <!-- نوار منوی بالای صفحه -->
-    <div class="navbar">
-        <span class="nav-logo">Global Bridge Academy</span>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    </div>
-
-    <!-- منوی همبرگری کشویی -->
-    <div class="nav-menu" id="navMenu">
-        <a href="#about" onclick="toggleMenu()">🏠 صفحه اصلی</a>
-        <a href="#panel-school" onclick="toggleMenu()">🎓 مکتب آنلاین</a>
-        <a href="#panel-scholarships" onclick="toggleMenu()">🌍 بورسیه روسیه</a>
-        <a href="#panel-trading" onclick="toggleMenu()">📈 استقلال مالی و ترید</a>
-        <a href="#panel-sports" onclick="toggleMenu()">⚽ آموزش‌های ورزشی</a>
-    </div>
-
     <div class="container">
         
         <!-- هدر سایت -->
-        <div class="header" id="about">
+        <div class="header">
             <img src="logo.jpg" alt="Global Bridge Academy Logo" class="logo-img" onerror="this.style.display='none';">
             <h1>Global Bridge Academy</h1>
             <p class="subtitle">مرکز تخصصی آموزش، خدمات آنلاین بورسیه و مهارت‌های نوین</p>
         </div>
 
-        <!-- ویدیوی یوتیوب -->
-        <div class="video-container" id="video-section">
-            <iframe src="https://youtube.com" allowfullscreen></iframe>
-        </div>
-
         <!-- ۱. پنل خدمات مکتب آنلاین -->
-        <div class="panel" id="panel-school">
+        <div class="panel" id="school">
             <h2>🎓 خدمات آموزش آنلاین مکتب پل جهانی</h2>
             <p>این مکتب ویژه کسانیکه از مکتب بازمانده‌اند طراحی شده و بستری عالی برای ادامه تحصیل از صنف ۷ الی ۱۲ فراهم کرده است. دروس تقویتی و سواد دیجیتال نیز به صورت زنده تدریس می‌گردد. بقیه دروس مکاتب را پیش خود در خانه با استفاده از کتاب‌ها و منابع آموزشی فرا گرفته و فقط هر هفته یک‌بار در امتحان هفتوار و در آخر سمستر در امتحان عمومی شرکت می‌کنید.</p>
             <p><strong>روندهای آموزشی مکتب:</strong></p>
@@ -312,9 +166,50 @@
             <p><strong>سند فراغت و مدارج بین‌المللی:</strong><br>فارغین مکتب سند شهادت‌نامه طبق کریکولم معارف افغانستان و سند معتبر از موسسه TLM بین‌المللی بریتانیا دریافت می‌کنند. این مکتب عضو رسمی موسسه پل آموزش افغانستان می‌باشد. پس از فراغت وارد سطح ۲ بین‌المللی (ورود به بورس‌ها) و سپس سطح ۳ بین‌المللی (طبق سیستم بریتانیا برای تاپ‌ترین فلوشیپ‌ها) می‌شوید.</p>
             
             <a href="https://whatsapp.com" target="_blank" class="panel-btn panel-btn-wa">
-                💬 <span>جهت ثبت نام در مکتب پیام دهید</span>
+                💬 <span>جهت ثبت نام در مکتب به واتساپ پیام دهید</span>
             </a>
         </div>
 
         <!-- ۲. پنل بورسیه روسیه -->
-        <div class="panel" id="panel-scholarships">
+        <div class="panel" id="scholarships">
+            <span class="expert-badge">🏆 همراهی توسط برنده رسمی اوپن دورز</span>
+            <h2>🌍 خدمات و مشاوره بورسیه اوپن دورز روسیه</h2>
+            <p>خدمات بورسیه فوق‌العاده اوپن دورز (Open Doors) روسیه به صورت تضمینی از ابتدا تا آخر توسط بنده (به عنوان یکی از برندگان این بورسیه و با تجربه کاری کامل) برای شما اجرا می‌گردد. من در تمام مراحل آماده‌سازی در کنار شما هستم.</p>
+            <p><strong>نکات مهم برای متقاضیان:</strong></p>
+            <ul>
+                <li>علاقه‌مندان باید آمادگی کامل و تهیه اسناد را داشته باشند.</li>
+                <li>کسانی که سند فراغت‌شان تایید وزارت خارجه نگردیده، هرچه عاجل‌تر اقدام به تایید نمایند.</li>
+                <li>بقیه اسناد کمکی و پاسپورت خود را آماده کرده و به ما اطلاع دهید تا پروسه ثبت‌نام را برنامه‌ریزی و اجرا نمایم.</li>
+            </ul>
+            
+            <a href="https://whatsapp.com" target="_blank" class="panel-btn panel-btn-wa">
+                💬 <span>ارتباط با واتساپ دپارتمان بورسیه روسیه</span>
+            </a>
+        </div>
+
+        <!-- ۳. پنل استقلال مالی و ترید -->
+        <div class="panel" id="trading">
+            <h2>📈 آموزش ترید و استقلال مالی</h2>
+            <p>هدف اصلی این دپارتمان، رساندن شما به استقلال مالی واقعی بدون محدودیت‌های جغرافیایی است. در این بخش، مفاهیم پایه تا پیشرفته بازارهای مالی، مدیریت ریسک، روانشناسی بازار و تحلیل روزانه جفت‌ارزها (اسعار) و اسعار دیجیتال (کریپتو) آموزش داده می‌شود تا بتوانید در خانه درآمد دلاری کسب کنید.</p>
+            
+            <a href="https://youtube.com" target="_blank" class="panel-btn panel-btn-yt">
+                🎥 <span>ورود به یوتیوب و تماشای ویدیوهای ترید</span>
+            </a>
+        </div>
+
+        <!-- ۴. پنل دپارتمان ورزشی -->
+        <div class="panel" id="sports">
+            <h2>⚽ دپارتمان آموزش‌های ورزشی</h2>
+            <p>سلامتی جسمانی در کنار ارتقای علمی، پایه موفقیت است. در این بخش به‌زودی برنامه‌های آموزشی ورزشی، ترفندهای ارتقای آمادگی جسمانی، برنامه‌های تمرینی در خانه و اصول هماهنگی عصب و عضله برای ورزشکاران قرار خواهد گرفت.</p>
+            <p style="color:#7b1fa2; font-weight:bold;">🔹 این بخش به‌زودی با ویدیوهای آموزشی جدید آپدیت می‌شود...</p>
+        </div>
+
+        <!-- فوتر -->
+        <div class="footer">
+            <p>© 2026 Global Bridge Academy. تمامی حقوق محفوظ است.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
